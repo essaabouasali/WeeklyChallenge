@@ -31,10 +31,6 @@ async function Program() {
             }
             
         }
-        //if (m < 0 || (m == 0 && (today.getDate() < day)))
-        //{
-        //    age--;
-        //}
         return age;
     }
     console.log(getAge(dateofbirth));
