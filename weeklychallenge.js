@@ -35,7 +35,6 @@ function getAge(dateString) {
     let day = dateString[0];
     var age = today.getFullYear() - dateString[2];
     var m = today.getMonth() - dateString[1];
-    //console.log((m === 0 && (today.getDate() < day)));
     if (m <= 0) {
         if (m == 0 && today.getDate() < day) {
             age--;
@@ -188,7 +187,7 @@ async function Program() {
                         console.log("search by licence number.");
                         let licnumber = await askQuestion("Enter lic number :");
                         let customer = findcustomer(Customers, licnumber);
-                        if (customer.isEmpty()) {
+                        if (customer == undefined) {
                             console.log("The Customer is not Existe.");
                             break;
                         }
